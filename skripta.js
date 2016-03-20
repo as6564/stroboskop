@@ -43,6 +43,12 @@ window.addEventListener('load', function() {
 	
 	var stop = function(event) {
 		ustavi = true;
+		
+		var ponovno=document.querySelector("#start");
+		ponovno.innerHTML="Zaženi stroboskop";
+		ponovno.removeEventListener('click',stop);
+		ponovno.addEventListener('click',zagon);
+
 	}
 	
 	var zagon = function(event) {
